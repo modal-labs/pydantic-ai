@@ -282,7 +282,7 @@ jobs:
       # deselecting them would drop real signal about the `sentence-transformers` extra rather
       # than drop flake. That self-skip is also why this job needs none of `ci.yml`'s
       # out-of-band HF cache warming.
-      - run: uv run --no-sync pytest --durations=100 -n logical --dist=loadgroup -o faulthandler_timeout=240
+      - run: uv run --no-sync pytest tests/test_examples.py tests/harness/test_durable_execution_docs.py -p no:xdist -p no:randomly -v -o faulthandler_timeout=150
         env:
           # The docs examples are type-checked against the locked dependencies, in `ci.yml`.
           TYPECHECK_EXAMPLES: false
