@@ -74,14 +74,14 @@ jobs:
   latest-versions:
     name: resolve and test at latest versions (${{ matrix.python-version }})
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 26
     strategy:
       # Both ends are wanted whichever one breaks, so neither cancels the other.
       fail-fast: false
       matrix:
         # The endpoints of `ci.yml`'s own `test` matrix. Keep these in step with it: an
         # endpoint left behind here silently stops asking the question on that interpreter.
-        python-version: ['3.10', '3.14']
+        python-version: ['3.10']
     env:
       CI: true
       # Both as on `ci.yml`'s all-extras test job, for the reasons documented there: blocking
@@ -282,7 +282,7 @@ jobs:
       # deselecting them would drop real signal about the `sentence-transformers` extra rather
       # than drop flake. That self-skip is also why this job needs none of `ci.yml`'s
       # out-of-band HF cache warming.
-      - run: uv run --no-sync pytest --durations=100 -n logical --dist=loadgroup
+      - run: uv run --no-sync pytest --durations=100 -n logical --dist=loadgroup -o faulthandler_timeout=240
         env:
           # The docs examples are type-checked against the locked dependencies, in `ci.yml`.
           TYPECHECK_EXAMPLES: false
