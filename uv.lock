@@ -28,24 +28,24 @@ exclude-newer = "0001-01-01T00:00:00Z" # This has no effect and is included for 
 exclude-newer-span = "P7D"
 
 [options.exclude-newer-package]
-pydantic-monty-runtime = false
-pydantic-handlebars = false
-pydantic-extra-types = false
-pydantic = false
-pydantic-core = false
-pydantic-ai-harness = false
-logfire-api = false
+anthropic = "2026-09-28T18:04:04Z"
 cassetter = false
+genai-prices = false
+google-genai = "2026-09-22T17:23:02Z"
 listentome = false
 logfire = false
-pydantic-settings = false
-pydantic-monty-client = false
-genai-prices = false
-pydantic-monty = false
-termflow-md = "2026-09-24T16:36:46Z"
-anthropic = "2026-09-28T18:04:04Z"
+logfire-api = false
 openai = "2026-09-23T00:08:49Z"
-google-genai = "2026-09-22T17:23:02Z"
+pydantic = false
+pydantic-ai-harness = false
+pydantic-core = false
+pydantic-extra-types = false
+pydantic-handlebars = false
+pydantic-monty = false
+pydantic-monty-client = false
+pydantic-monty-runtime = false
+pydantic-settings = false
+termflow-md = "2026-09-24T16:36:46Z"
 
 [manifest]
 members = [
@@ -533,7 +533,7 @@ wheels = [
 
 [[package]]
 name = "apprise"
-version = "1.9.6"
+version = "1.11.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "certifi" },
@@ -546,9 +546,9 @@ dependencies = [
     { name = "requests-oauthlib" },
     { name = "tzdata", marker = "sys_platform == 'win32' or (extra == 'extra-11-pydantic-ai-mcp-tasks' and extra == 'extra-19-pydantic-ai-harness-stackone') or (extra == 'extra-11-pydantic-ai-mcp-tasks' and extra == 'group-11-pydantic-ai-dev') or (extra == 'extra-16-pydantic-ai-slim-mcp-tasks' and extra == 'extra-19-pydantic-ai-harness-stackone') or (extra == 'extra-16-pydantic-ai-slim-mcp-tasks' and extra == 'group-11-pydantic-ai-dev')" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a9/a7/bb182d81f35c3fe405505f0976da4b74f942cfdd53c7193b0fe50412aa27/apprise-1.9.6.tar.gz", hash = "sha256:4206be9cb5694a3d08dd8e0393bbb9b36212ac3a7769c2633620055e75c6caef", size = 1921714, upload-time = "2025-12-07T19:24:30.587Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a8/f8/83f4e2aaaa0342dc67f783bf84427d9ff5cfa4ecde3a52d9b587740a91ee/apprise-1.11.0.tar.gz", hash = "sha256:3b1e6f5365b302d1fae270c0c8007958e54224b9b7808acec69006ea27f5b8a2", size = 2337248, upload-time = "2026-05-29T17:52:29.198Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/39/df/343d125241f8cd3c9af58fd09688cf2bf59cc1edfd609adafef3556ce8ec/apprise-1.9.6-py3-none-any.whl", hash = "sha256:2fd18e8a5251b6a12f6f9d169f1d895d458d1de36a5faee4db149cedcce51674", size = 1452059, upload-time = "2025-12-07T19:24:28.568Z" },
+    { url = "https://files.pythonhosted.org/packages/5e/79/1483693160917522703708e45b4045946d86be634b8af2c2ac9f361f8fa3/apprise-1.11.0-py3-none-any.whl", hash = "sha256:6abc6d9f8dddedfe14b2918c3553146894ac6e3dad401deaf854b20b4c455d38", size = 1712975, upload-time = "2026-05-29T17:52:26.645Z" },
 ]
 
 [[package]]
@@ -9032,7 +9032,6 @@ dependencies = [
     { name = "tomli", marker = "python_full_version < '3.11' or (extra == 'extra-11-pydantic-ai-mcp-tasks' and extra == 'extra-19-pydantic-ai-harness-stackone') or (extra == 'extra-11-pydantic-ai-mcp-tasks' and extra == 'group-11-pydantic-ai-dev') or (extra == 'extra-16-pydantic-ai-slim-mcp-tasks' and extra == 'extra-19-pydantic-ai-harness-stackone') or (extra == 'extra-16-pydantic-ai-slim-mcp-tasks' and extra == 'group-11-pydantic-ai-dev')" },
     { name = "wcwidth" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ad/83/72eb9e56a2609e0f9832eef8fef696ee94b5cf73fb1f164a7d82b6c26d4b/termflow_md-0.9.3.tar.gz", hash = "sha256:1cabf9ad3b066f2eb848fad3dcdadaf32c8e8bcc46adec60fc1ac2eb65f0ea20", size = 168629, upload-time = "2026-09-24T16:36:46.75Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/73/93/d6b95a69eece72a79c3bd92e28cc48d6c7493b9d720ff244ddc9885681ba/termflow_md-0.9.3-py3-none-any.whl", hash = "sha256:569f1ac99d466d1ddd91ec057139965864ffb678da6d0f9da30ee4a458c9f6fb", size = 95796, upload-time = "2026-09-24T16:36:45.369Z" },
 ]
